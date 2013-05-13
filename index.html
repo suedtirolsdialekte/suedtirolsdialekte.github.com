@@ -22,22 +22,22 @@
 		<!-- META TAGS -->
 		<meta charset="utf-8" />
 		
-		<!-- Scroll up --><!--
+		<!-- Scroll up -->
 		<script>
 			$(document).ready(function(){
 
-				$("#back-top").hide();
+				$("#header").hide();
 				
 				$(function () {
 					$(window).scroll(function () {
 						if ($(this).scrollTop() > 100) {
-							$('#back-top').fadeIn();
+							$('#header').fadeIn();
 						} else {
-							$('#back-top').fadeOut();
+							$('#header').fadeOut();
 						}
 					});
 
-					$('#back-top a').click(function () {
+					$('#header').click(function () {
 						$('body,html').animate({
 							scrollTop: 0
 						}, 800);
@@ -46,7 +46,7 @@
 				});
 
 			});
-		</script>-->
+		</script>
 				
 		<script>
 			document.addEventListener("touchstart", function() {},false);
