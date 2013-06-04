@@ -13,6 +13,22 @@ body, html{
 	margin-top:5%;
 	margin-bottom:5%;
 }
+#title:hover{
+	color: #c0392b;
+}
+#letter a, #letter a:visited {
+	font-family: Lato;
+	text-transform:uppercase;
+	font-weight:700;
+	color:white;
+	text-decoration:none;
+	padding:10px;
+	padding-left:20px;
+	font-size:20px;
+}
+#letter a:hover {
+	text-decoration:underline;
+}
 #liste{
 	height:80%;
 	min-height:500px;
@@ -23,7 +39,6 @@ body, html{
 }
 #liste li{
 	margin: 0 auto;
-	background: #E74C3C;
 	width:80px;
 	height:80px;
 	float:left;
@@ -60,7 +75,7 @@ body, html{
 	font-weight: 900;
 	font-size:75px;
 	text-align: center;
-	margin:20px;
+	margin:10px;
 }
 #letter h1:before{
 }
@@ -76,6 +91,7 @@ body, html{
 #letter div {
 	width:640px;
 	margin: 0 auto;
+	margin-top:10px;
 }
 
 #letter h2{
@@ -96,67 +112,56 @@ body, html{
 .red{
 	background: #e74c3c;
 }
-.red div li{
+.red div li , .red a{
 	background: #C0392B;
 }
 .blue{
 	background: #3498db;
 }
-.blue div li{
+.blue div li, .blue a{
 	background: #2980b9;
 }
 .turquoise{
 	background: #1abc9c;
 }
-.turquoise div li{
+.turquoise div li, .turquoise a{
 	background: #16a085;
 }
 .green{
 	background: #2ecc71;
 }
-.green div li{
+.green div li , .green a{
 	background: #27ae60;
 }
 .blue{
 	background: #3498db;
 }
-.blue div li{
+.blue div li, .blue a{
 	background: #2980b9;
 }
 .purple{
 	background: #9b59b6;
 }
-.purple div li{
+.purple div li, .purple a{
 	background: #8e44ad;
 }
 .darkblue{
 	background: #34495e;
 }
-.darkblue div li{
+.darkblue div li, .darkblue a{
 	background: #2c3e50;
 }
 .yellow{
 	background: #f1c40f;
 }
-.yellow div li{
+.yellow div li, .yellow a{
 	background: #f39c12;
 }
 .orange{
 	background: #e67e22;
 }
-.orange div li{
+.orange div li, .orange a{
 	background: #d35400;
-}
-.gray{
-	background: #bdc3c7;
-	color: black;
-}
-.gray div li{
-	background: #ecf0f1;
-	color:black;
-}
-.gray h1{
-	color:white;
 }
 
 ::-moz-selection { background: #A10; color: #fff; text-shadow: none; }
@@ -189,6 +194,7 @@ body, html{
 		width:100%;
 		margin:0;
 		margin-bottom:20px;
+		margin-top:10px;
 	}
 
 }
@@ -203,6 +209,7 @@ body, html{
 		height:auto;
 		overflow:auto;
 		margin-bottom:50px;
+		overflow-x:hidden;
 	}
 	#liste li {
 		width: 25%;
