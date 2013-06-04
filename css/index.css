@@ -162,22 +162,10 @@ body, html{
 ::-moz-selection { background: #A10; color: #fff; text-shadow: none; }
 ::selection { background: #A10; color: #fff; text-shadow: none; }
 
-@media (max-height: 568px) and(-webkit-min-device-pixel-ration: 2){
-	
-	#title{
-		font-size:53px;
-	}
-	#liste{
-		width:100%;
-	}
-
-}
-
-
 @media only screen and (max-width: 320px) {
 	
 	#title{
-		font-size:30px;
+		font-size:40px;
 		height:auto;
 	}
 	#liste{
