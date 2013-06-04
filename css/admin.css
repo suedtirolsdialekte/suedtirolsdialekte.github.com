@@ -1,0 +1,19 @@
+body, html{
+	margin:0;
+	padding:0;
+	height:100%;
+	overflow-x:hidden;
+	background: #C0392B;
+	font-family: Lato;
+}
+h1{
+	text-align:center;
+	font-size:100px;
+	color:white;
+	margin-top:10%;
+}
+@media only screen and (max-width: 768px) {
+	h1{
+		font-size:30px;
+	}
+}
