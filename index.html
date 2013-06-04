@@ -1,151 +1,368 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<!-- mobile devices -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-		
-		<title>S&#252;dtirols Dialekte</title>
+		<title>S&uuml;dtirols Dialekte</title>
 		
 		<!-- CSS -->
-		<link rel="stylesheet" type="text/css" href="./css/index.css">
-		<link rel="stylesheet" type="text/css" href="./css/top.css">
+		<link rel="stylesheet" href="./css/index.css" type="text/css">
 		
-		<!-- Google Fonts -->
+		<!-- Google Webfonts -->
 		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,400,700,900' rel='stylesheet' type='text/css'>
 		
-		<!-- Favicon --> 
-		<link rel="shortcut icon" href="./img/favicon.ico"/>	
-		
-		<!-- JQuery -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-		
-		<!-- META TAGS -->
-		<meta charset="utf-8" />
-		
-		<!-- Scroll up -->
-		<script>
-			$(document).ready(function(){
-
-				$("#header").hide();
-				
-				$(function () {
-					$(window).scroll(function () {
-						if ($(this).scrollTop() > 100) {
-							$('#header').fadeIn();
-						} else {
-							$('#header').fadeOut();
-						}
-					});
-
-					$('#header').click(function () {
-						$('body,html').animate({
-							scrollTop: 0
-						}, 800);
-						return false;
-					});
-				});
-
-			});
-		</script>
-				
-		<script>
-			document.addEventListener("touchstart", function() {},false);
-		</script>
+		<!-- jQuery -->
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 		
 	</head>
-	
 	<body>
-		<div id="fb-root"></div>
-		<script>
-			(function(d, s, id) {
-			  var js, fjs = d.getElementsByTagName(s)[0];
-			  if (d.getElementById(id)) return;
-			  js = d.createElement(s); js.id = id;
-			  js.src = "//connect.facebook.net/de_DE/all.js#xfbml=1";
-			  fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
-		</script>
 		
-		<div id = "header">
-			<div id = "title">S&#252;dtirols Dialekte</div>
+		<div id = "title">
+				S&uuml;dtirols Dialekte
 		</div>
 		
-		
-		<ul id = "list">
-			
-			<li id = "index">a</li>
-			<li id = "item">Antrisch<span>Unheimlich</span></li>
-			<li id = "item">Assunter giahn<span>Austellen</span></li>
-			
-			<li id = "index">b</li>
-			<li id = "item">Bierl<span>Ger&#228;t um das Heu von der Alm ins Tal zu bef&#246;rdern</span></li>
-			<li id = "item">Blank<span>Kein Geld mehr</span></li>
-			<li id = "item">Bleckstizit<span>Barfuss</span></li>
-			
-			<li id = "index">e</li>
-			<li id = "item">Empo<span>Eimer</span></li>
-			
-			<li id = "index">f</li>
-			<li id = "item">Fruadig<span>Zornig sein</span></li>
-			
-			<li id = "index">g</li>
-			<li id = "item">Getanggo<span>Linksh&#228;nder</span></li>
-			<li id = "item">Giggazn<span>Sich aufregen</span></li>
-			<li id = "item">Glaime<span>Knapp</span></li>
-			<li id = "item">Gnaggina mit lepsbruat<span>Kaminwurze mit Sch&#252;ttelbrot</span></li>
-			
-			<li id = "index">h</li>
-			<li id = "item">Hiata pui<span>Hirtenjunge</span></li>
-			<li id = "item">Himpo<span>Himbeere</span></li>
-			<li id = "item">Horzen<span>Warten</span></li>
-			
-			<li id = "index">i</li>
-			<li id = "item">Immerling<span>Manchmal</span></li>
-			
-			<li id = "index">m</li>
-			<li id = "item">Moschpa<span>Vogelbeeren</span></li>
-			
-			<li id = "index">n</li>
-			<li id = "item">Nunze<span>Ameise</span></li>
-			
-			<li id = "index">p</li>
-			<li id = "item">Pascha<span>Angeber/Besserwisser/K&#246;nig</span></li>
-			<li id = "item">Pfurfl<span>Freche, kleine g&#246;re</span></li>
-			<li id = "item">Pragga<span>Teppichklopfer</span></li>
-			<li id = "item">Prefilexn<span>Etwas unn&#246;tig dauernd wiederholen</span></li>
-			<li id = "item">Puitn<span>Hausanger</span></li>
-			
-			<li id = "index">r</li>
-			<li id = "item">Rassig<span>Salzig</span></li>
-			<li id = "item">Reasch<span>Schnell</span></li>
-			<li id = "item">Riabig<span>Ruhig</span></li>
-			
-			<li id = "index">s</li>
-			<li id = "item">Sauschpa<span>Johannisbeeren</span></li>
-			<li id = "item">Schnerfa<span>Rucksack</span></li>
-			<li id = "item">Seisch<span>H&#228;sslich</span></li>
-			<li id = "item">Sprouza<span>Wenn man in eine Richtung schaut, aber ohne etwas zu fokussieren</span></li>
-			<li id = "item">Struzer<span>Jemand, der nur langsam nachkommt</span></li>
-			
-			<li id = "index">t</li>
-			<li id = "item">Tengs<span>Links</span></li>
-			<li id = "item">Toarat<span>Schwerh&#246;rig</span></li>
-			<li id = "item">Tschuusn<span>Tr&#246;deln</span></li>
-			
-			<li id = "index">u</li>
-			<li id = "item">Untoniexn<span>Unter der Axelh&#246;le</span></li>
-			
-			<li id = "index">w</li>
-			<li id = "item">Weilant<span>Langweilig</span></li>
-			<li id = "item">Wissebam<span>Balken um das Heu auf dem Ladewagen nieder zu dr&#252;cken</span></li>
-			<li id = "item">Wundobissig<span>Neugierig</span></li>
+		<ul id = "liste">
+			<li><a href = "#a">a</a></li>
+			<li><a href = "#b">b</a></li>
+			<li><a href = "#c">c</a></li>
+			<li><a href = "#d">d</a></li>
+			<li><a href = "#e">e</a></li>
+			<li><a href = "#f">f</a></li>
+			<li><a href = "#g">g</a></li>
+			<li><a href = "#h">h</a></li>
+			<li><a href = "#i">i</a></li>
+			<li><a href = "#j">j</a></li>
+			<li><a href = "#k">k</a></li>
+			<li><a href = "#l">l</a></li>
+			<li><a href = "#m">m</a></li>
+			<li><a href = "#n">n</a></li>
+			<li><a href = "#o">o</a></li>
+			<li><a href = "#p">p</a></li>
+			<li><a href = "#q">q</a></li>
+			<li><a href = "#r">r</a></li>
+			<li><a href = "#s">s</a></li>
+			<li><a href = "#t">t</a></li>
+			<li><a href = "#u">u</a></li>
+			<li><a href = "#v">v</a></li>
+			<li><a href = "#w">w</a></li>
+			<li><a href = "#x">x</a></li>
+			<li><a href = "#y">y</a></li>
+			<li><a href = "#z">z</a></li>
 		</ul>
 		
-		<div id = "likes"><div class="fb-like" data-href="http://www.facebook.com/suedtirolsdialekte" data-send="true" data-width="450px" data-show-faces="true" data-font="arial"></div></div>
-		<div id = "footer">Copyright &#169; 2013 <a href = "http://www.facebook.com/suedtirolsdialekte" target="_blank">S&#252;dtirols Dialekte</a>. All rights reserved.</div>
+		<div id="letter" class = "turquoise">
+			<h1 color="black" id = "a">&raquo;a&laquo;</h1>
+			<div>
+				<li>
+					<h2>Antrisch</h2>
+					<p>Unheimlich</p>
+				</li>
+				
+				<li>
+					<h2>Assunter giahn</h2>
+					<p>Austellen</p>
+				</li>
+			</div>
+		</div>
 		
-		<p id = "back-top">
-			<a href = "#"><span></span>Back to Top</a>
-		</p>
+		<div id="letter" class = "green">
+			<h1 id = "b">&raquo;b&laquo;</h1>
+			<div>
+				<li>
+					<h2>Bengele</h2>
+					<p>Frecher Junge</p>
+				</li>
+				<li>
+					<h2>Bierl</h2>
+					<p>Ger&#228;t um das Heu von der Alm ins Tal zu bef&#246;rdern</p>
+				</li>
+				
+				<li>
+					<h2>Bleckstizit</h2>
+					<p>Barfuss</p>
+				</li>
+			</div>
+		</div>
+		
+		<div id="letter" class = "red">
+			<h1 id = "d">&raquo;d&laquo;</h1>
+			<div>
+				<li>
+					<h2>Dicht</h2>
+					<p>Besoffen</p>
+				</li>
+			</div>
+		</div>
+		
+		<div id="letter" class = "blue">
+			<h1 id = "e">&raquo;e&laquo;</h1>
+			<div>
+				<li>
+					<h2>Empo</h2>
+					<p>Eimer</p>
+				</li>
+			</div>
+		</div>
+		
+		<div id="letter" class = "purple">
+			<h1 id = "f">&raquo;f&laquo;</h1>
+			<div>
+				<li>
+					<h2>Firschta</h2>
+					<p>Blauer Schurz</p>
+				</li>
+				<li>
+					<h2>F&#246;&uuml;znh&#246;&uuml;bl</h2>
+					<p>Mundharmonika</p>
+				</li>
+				<li>
+					<h2>Fruadig</h2>
+					<p>Zornig sein</p>
+				</li>
+			</div>
+		</div>
+		
+		<div id="letter" class = "darkblue">
+			<h1 id = "g">&raquo;g&laquo;</h1>
+			<div>
+				<li>
+					<h2>Getanggo</h2>
+					<p>Linksh&#228;nder</p>
+				</li>
+				<li>
+					<h2>Giggazn</h2>
+					<p>Sich aufregen</p>
+				</li>
+				<li>
+					<h2>Glaime</h2>
+					<p>Knapp</p>
+				</li>
+				<li>
+					<h2>Gnaggina mit lepsbruat</h2>
+					<p>Kaminwurze mit Sch&#252;ttelbrot</p>
+				</li>
+				<li>
+					<h2>Guggahandscha</h2>
+					<p>Enzian</p>
+				</li>
+			</div>
+		</div>
+		
+		<div id="letter" class = "yellow">
+			<h1 id = "h">&raquo;h&laquo;</h1>
+			<div>
+				<li>
+					<h2>Hedodechse</h2>
+					<p>Eidechse</p>
+				</li>
+				<li>
+					<h2>Hegedex</h2>
+					<p>Eidechse</p>
+				</li>
+				<li>
+					<h2>Hiata pui</h2>
+					<p>Hirtenjunge</p>
+				</li>
+				<li>
+					<h2>Himpo</h2>
+					<p>Himbeere</p>
+				</li>
+				<li>
+					<h2>Horzen</h2>
+					<p>Warten</p>
+				</li>
+			</div>
+		</div>
+		
+		<div id="letter" class = "orange">
+			<h1 id = "i">&raquo;i&laquo;</h1>
+			<div>
+				<li>
+					<h2>Immerling</h2>
+					<p>Manchmal</p>
+				</li>
+			</div>
+		</div>
+		
+		<div id="letter" class = "red">
+			<h1 id = "m">&raquo;m&laquo;</h1>
+			<div>
+				<li>
+					<h2>Moschpa</h2>
+					<p>Vogelbeeren</p>
+				</li>
+				<li>
+					<h2>Mogi</h2>
+					<p>Darf ich?</p>
+				</li>
+				<li>
+					<h2>Mubis</h2>
+					<p>Müde</p>
+				</li>
+			</div>
+		</div>
+		
+		<div id="letter" class = "gray">
+			<h1 id = "n">&raquo;n&laquo;</h1>
+			<div>
+				<li>
+					<h2>Nunze</h2>
+					<p>Ameise</p>
+				</li>
+			</div>
+		</div>
+		
+		<div id="letter" class = "turquoise">
+			<h1 id = "p">&raquo;p&laquo;</h1>
+			<div>
+				<li>
+					<h2>Pascha</h2>
+					<p>Angeber/Besserwisser/K&#246;nig</p>
+				</li>
+				<li>
+					<h2>Pfurfl</h2>
+					<p>Freche, kleine g&#246;re</p>
+				</li>
+				<li>
+					<h2>Pisele</h2>
+					<p>K&uuml;cken</p>
+				</li>
+				<li>
+					<h2>Pragga</h2>
+					<p>Teppichklopfer</p>
+				</li>
+				<li>
+					<h2>Prefilexn</h2>
+					<p>Etwas unn&#246;tig dauernd wiederholen</p>
+				</li>
+				<li>
+					<h2>Puitn</h2>
+					<p>Hausanger</p>
+				</li>
+			</div>
+		</div>
+		
+		<div id="letter" class = "green">
+			<h1 id = "r">&raquo;r&laquo;</h1>
+			<div>
+				<li>
+					<h2>Rassig</h2>
+					<p>Salzig</p>
+				</li>
+				<li>
+					<h2>Reasch</h2>
+					<p>Schnell</p>
+				</li>
+				<li>
+					<h2>Riabig</h2>
+					<p>Ruhig</p>
+				</li>
+				<li>
+					<h2>Rotzbremse</h2>
+					<p>Schnauzer</p>
+				</li>
+			</div>
+		</div>
+		
+		<div id="letter" class = "blue">
+			<h1 id = "s">&raquo;s&laquo;</h1>
+			<div>
+				<li>
+					<h2>Sauschpa</h2>
+					<p>Johannisbeeren</p>
+				</li>
+				<li>
+					<h2>Schelch</h2>
+					<p>Shief</p>
+				</li>
+				<li>
+					<h2>Schnerfa</h2>
+					<p>Rucksack</p>
+				</li>
+				<li>
+					<h2>Seisch</h2>
+					<p>H&#228;sslich</p>
+				</li>
+				<li>
+					<h2>Sprouza</h2>
+					<p>Wenn man in eine Richtung schaut, aber ohne etwas zu fokussieren</p>
+				</li>
+				<li>
+					<h2>Struzer</h2>
+					<p>Jemand, der nur langsam nachkommt</p>
+				</li>
+			</div>
+		</div>
+		
+		<div id="letter" class = "purple">
+			<h1 id = "t">&raquo;t&laquo;</h1>
+			<div>
+				<li>
+					<h2>Tenglmaschine</h2>
+					<p>Gerät zum sch&#228;rfen einer Sense</p>
+				</li>
+				<li>
+					<h2>Tengs</h2>
+					<p>Links</p>
+				</li>
+				<li>
+					<h2>Toarat</h2>
+					<p>Schwerh&#246;rig</p>
+				</li>
+				<li>
+					<h2>Tscheggl</h2>
+					<p>Komischer Mensch</p>
+				</li>
+					<h2>Tschingala</h2>
+					<p>Italiener</p>
+				</li>
+				<li>
+					<h2>Tschuusn</h2>
+					<p>Tr&#246;deln</p>
+				</li>
+			</div>
+		</div>
+		
+		<div id="letter" class = "darkblue">
+			<h1 id = "u">&raquo;u&laquo;</h1>
+			<div>
+				<li>
+					<h2>Untoniexn</h2>
+					<p>Unter der Axelh&#246;le</p>
+				</li>
+			</div>
+		</div>
+		
+		<div id="letter" class = "yellow">
+			<h1 id = "w">&raquo;w&laquo;</h1>
+			<div>
+				<li>
+					<h2>Weilant</h2>
+					<p>Langweilig</p>
+				</li>
+				<li>
+					<h2>Wielsch</h2>
+					<p>Maulwurf</p>
+				</li>
+				<li>
+					<h2>Wissebam</h2>
+					<p>Balken um das Heu auf dem Ladewagen nieder zu dr&#252;cken</p>
+				</li>
+				<li>
+					<h2>Wundobissig</h2>
+					<p>Neugierig</p>
+				</li>
+			</div>
+		</div>
+		
+		<div id="letter" class = "green">
+			<h1 id = "z">&raquo;z&laquo;</h1>
+			<div>
+				<li>
+					<h2>Zuhschzn</h2>
+					<p>Tannenzapfen</p>
+				</li>
+			</div>
+		</div>
+		
 	</body>
 </html>
