@@ -233,6 +233,7 @@ body, html{
 		height:auto;
 		overflow:auto;
 		clear:both;
+		overflow:hidden;
 	}
 	#letter div{
 		width:320px;
