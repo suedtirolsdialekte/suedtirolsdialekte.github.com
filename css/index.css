@@ -13,9 +13,6 @@ body, html{
 	margin-top:5%;
 	margin-bottom:5%;
 }
-#title:hover{
-	color: #c0392b;
-}
 #letter a, #letter a:visited {
 	font-family: Lato;
 	text-transform:uppercase;
@@ -39,10 +36,9 @@ body, html{
 }
 #liste li{
 	margin: 0 auto;
-	width:80px;
-	height:80px;
 	float:left;
 	background: #e74c3c;
+	padding:0;
 }
 #liste li:hover{
 	background: #C0392B;
@@ -53,10 +49,19 @@ body, html{
 	display: block;
 	font-weight:700;
 	font-size:40px;
-	width:80px;
-	height:70px;
+	padding:0;
 	text-decoration:none;
+	width:80px;
+	height:80px;
+	margin:auto;
+	margin-top:10px;
 	text-align:center;
+}
+#liste .fb{
+	background: #3b5999;
+}
+#liste .fb:hover{
+	background: #2a4888;
 }
 
 #letter{
@@ -163,9 +168,16 @@ body, html{
 .orange div li, .orange a{
 	background: #d35400;
 }
+.gray {
+	background: #95a5a6;
+}
+.gray div li, .gray a{
+	background: #7f8c8d;
+	color:black;
+}
 
-::-moz-selection { background: #A10; color: #fff; text-shadow: none; }
-::selection { background: #A10; color: #fff; text-shadow: none; }
+::-moz-selection { background: #C0392B; color: #fff; text-shadow: none; }
+::selection { background: #C0392B; color: #fff; text-shadow: none; }
 
 @media only screen and (max-width: 320px) {
 	
@@ -180,12 +192,14 @@ body, html{
 	#liste li {
 		width: 25%;
 		height: 25%;
+		padding:0;
 		text-align:center;
 	}
 	#letter{
 		height:auto;
 		width:100%;
 		overflow:auto;
+		padding-bottom:20px;
 	}
 	#letter div{
 		width:100%;
