@@ -1,0 +1,25 @@
+body, html{
+	margin:0;
+	padding:0;
+	height:100%;
+	overflow-x:hidden;
+	font-family: Lato;
+}
+#walloffame{
+	float:left;
+	min-height:100%;
+	background: #e74c3c;
+	width:50%;
+}
+#walloffame h1, #wallofshame h1{
+	color:white;
+	text-align:center;
+	margin:20px;
+	font-size:100px;
+}
+#wallofshame{
+	float:left;
+	min-height:100%;
+	background: #2ecc71;
+	width:50%;
+}
