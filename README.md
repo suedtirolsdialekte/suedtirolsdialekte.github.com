@@ -1,4 +1,5 @@
 suedtirolsdialekte.github.com
 =============================
 
-Website
+The official Südtirol's Dialekte Website.
+Deal with it!
