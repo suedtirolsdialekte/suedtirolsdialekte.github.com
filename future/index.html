@@ -189,12 +189,18 @@
 			color: white;
 		}
 
-		article div{
+		article .item{
 			float: left;
 			/*display: inline-block;*/
 			width: 15rem;
+			height: 15rem;
 			padding: 1rem;
 			margin: 1rem;
+			position: relative;
+		}
+
+		article .item *{
+			max-width: 12rem;
 		}
 
 		article:nth-child(even) div{
@@ -239,7 +245,7 @@
 					data.sort(compare);
 					// console.log(data);
 					for (var i = data.length - 1; i >= 0; i--) {
-						var content = "<div><h2>"+data[i].name+"</h2><p>"+data[i].bedeutung+"</p></div>";
+						var content = "<div class=\"item\"><div class=\"verticalCenter\"><h2>"+data[i].name+"</h2><p>"+data[i].bedeutung+"</p></div></div>";
 						$('#'+data[i].name.charAt(0).toLowerCase()+' .words').append(content);	
 					};
 	            }
