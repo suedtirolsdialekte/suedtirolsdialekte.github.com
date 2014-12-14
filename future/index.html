@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Suedtirols Dialekte — Home</title>
+
+	<!-- JQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+	<!-- Responsive -->
+	<meta name="viewport" content="width=device-width, target-densitydpi=device-dpi, initial-scale=1.0, user-scalable=no">
+	
+	<!-- Charset -->
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+	<link href="http://fonts.googleapis.com/css?family=Lato:100,400,700,900" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet' type='text/css'>
+
+	<style type="text/css">
+		*{
+			margin: 0 auto;
+			padding: 0;
+			text-rendering: optimizeLegibility;
+			-webkit-font-smoothing: antialiased;
+			-webkit-appearance: none;
+			border-radius: 0;
+			text-decoration: none;
+			list-style-type: none;
+			color: black;
+			font-family: "Source Sans Pro";
+		}
+
+		:focus {outline:none;}
+
+		::selection {
+			baackground: #60E698; /* Safari */
+		}
+
+		::-moz-selection {
+			baackground: #60E698; /* Firefox */
+		}
+
+		*, *:before, *:after {
+			-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+		}
+
+		body, html{
+			height: 100%;
+			width: 100%;
+		}
+
+		.verticalCenter{
+			position: absolute;
+			top: 50%; left: 0; right: 0;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		li{
+			list-style-type: none;
+		}
+
+		header{
+			height: 100%;
+		}
+
+		nav{
+			position: fixed;
+			width: 100%;
+			vertical-align: top;
+			padding: 1rem;
+			background: #eee;
+			/*border-bottom: 2pt solid #ccc;*/
+			height: 4em;
+			z-index: 1;
+		}
+
+		nav a{
+			line-height: 2rem;
+			padding: 0 0.5em;
+			color: #666;
+		}
+
+		nav a:hover{
+			color: #000;
+		}
+
+		#logo{
+			float: right;
+			font-size: 1.2em;
+			font-weight: 700;
+			/*margin-right: -12rem;*/
+		}
+
+		#head{
+			text-align: center;
+		}
+
+		#head h1{
+			font-size: 3.4rem;
+			padding-bottom: 1em;
+			margin-top: 4rem;
+			font-weight: 700;
+		}
+
+		#head #alpha{
+			margin-top: 4rem;
+			width: 30rem;
+			background: #ccc;
+		}
+
+
+		#head #alpha li{
+			position: relative;
+			float: left;
+			width: 5rem;
+			height: 5rem;
+			background: #e74c3c;
+		}
+
+		#head #alpha li a{
+			display: block;
+			width: 5rem;
+			height: 5rem;
+			line-height: 5rem;
+			font-size: 2.5rem;
+			font-weight: 600;
+			color: white;
+		}
+
+		#head #alpha li:hover{
+			background: #C0392B;
+		}
+
+		#head #facebook a{
+			background: #3b5998;
+		}
+
+		#head #facebook a:hover{
+			background: #334C83;
+		}		
+
+		#head #facebook svg{
+			width: 50%;
+			height: 50%;
+		}
+
+		#head #facebook svg{
+			position: absolute;
+			top: 25%;
+			right: 25%;
+		}
+
+		#data{
+			/*height: 200%;*/
+			
+		}
+
+		article{
+			width: 100%;
+			text-align: center;
+			padding: 5rem;
+			overflow: auto;
+		}
+
+		article h1{
+			padding-bottom: 1em;
+			font-size: 3rem;
+			/*font-family: "Source Serif";*/
+		}
+
+		.words{
+			max-width: 68rem;
+		}
+
+		article:nth-child(even){
+			background: #e74c3c;
+		}
+
+		article:nth-child(even) h1{
+			color: white;
+		}
+
+		article:nth-child(odd) h2, article:nth-child(odd) p{
+			color: white;
+		}
+
+		article div{
+			float: left;
+			/*display: inline-block;*/
+			width: 15rem;
+			padding: 1rem;
+			margin: 1rem;
+		}
+
+		article:nth-child(even) div{
+			background: #fff;
+		}
+
+		article:nth-child(odd) div{
+			background: #e74c3c;
+		}
+	</style>
+
+	<script type="text/javascript">
+		var dataUrl = "file:///Users/Michael/Documents/Coding/Web/suedtirolsdialekte/data.json";
+
+		var data = ""
+		function compare(a,b) {
+			if (a.name > b.name)
+				return -1;
+			if (a.name < b.name)
+				return 1;
+			return 0;
+		}
+		// $(window).scroll(function() {
+		//     if ($(window).scrollTop() > 200) {
+		//     	$('#logo').css('margin-right','0rem');
+		//     	// $('#logo').fadeOut(300);
+		//     }
+		//     else {
+		//         $('#logo').css('margin-right','-12rem');
+		//     	// $('#logo').fadeIn(300);
+		//     }
+		// });
+		var content = "";
+		$(window).ready(function(){
+			$.ajax({
+	            url: dataUrl,
+	            async: true,
+	            success: function (data){
+	                data = $.parseJSON(data);
+	                data = data['data'];
+	    			// console.log(data);
+					data.sort(compare);
+					// console.log(data);
+					for (var i = data.length - 1; i >= 0; i--) {
+						var content = "<div><h2>"+data[i].name+"</h2><p>"+data[i].bedeutung+"</p></div>";
+						$('#'+data[i].name.charAt(0).toLowerCase()+' .words').append(content);	
+					};
+	            }
+	        });
+		});
+		
+	</script>
+</head>
+<body>
+<nav>
+	<a href="mailto:suedtirolsdialekte@gmail.com">Submit</a>
+	<a href="https://www.facebook.com/suedtirolsdialekte">Facebook</a>
+	<a id="logo" href="http://suedtirolsdialekte.com">Südtirols Dialekte</a>
+</nav>
+<header>
+	<section class="verticalCenter" id="head">
+		<!-- <h1>Südtirols Dialekte</h1> -->
+		<ul id="alpha">
+			<li><a href="#a">a</a></li>
+			<li><a href="#b">b</a></li>
+			<li><a href="#c">c</a></li>
+			<li><a href="#d">d</a></li>
+			<li><a href="#e">e</a></li>
+			<li><a href="#f">f</a></li>
+			<li><a href="#g">g</a></li>
+			<li><a href="#h">h</a></li>
+			<li><a href="#i">i</a></li>
+			<li><a href="#j">j</a></li>
+			<li><a href="#k">k</a></li>
+			<li><a href="#l">l</a></li>
+			<li><a href="#m">m</a></li>
+			<li><a href="#n">n</a></li>
+			<li><a href="#o">o</a></li>
+			<li><a href="#p">p</a></li>
+			<li><a href="#q">q</a></li>
+			<li><a href="#r">r</a></li>
+			<li><a href="#s">s</a></li>
+			<li><a href="#t">t</a></li>
+			<li><a href="#u">u</a></li>
+			<li><a href="#v">v</a></li>
+			<li><a href="#w">w</a></li>
+			<li><a href="#x">x</a></li>
+			<li><a href="#y">y</a></li>
+			<li><a href="#z">z</a></li>
+			<!-- <li id="facebook">
+				<a href = "https://www.facebook.com/suedtirolsdialekte">
+					<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+						<g>
+							<path class="facebook" fill="#ffffff" d="M68.619,11.328v13.601h-7.4c-2.2,0-3.601,0.6-4.301,1.8c-0.5,0.8-0.699,2.2-0.699,4.1v6.201h12.601
+								l-1.5,13.701H56.219v39.502H39.917V50.73h-8V37.03h8v-8.201c0-8.4,2.9-13.801,8.601-16.101c2.801-1.1,5.2-1.4,7.701-1.4H68.619z"/>
+						</g>
+					</svg>
+				</a>
+			</li> -->
+		</ul>
+	</section>
+</header>
+<section id="data">
+	<script type="text/javascript">
+	var arr = "abcdefghijklmnopqrstuvwxyz";
+	for (var i = 0; i < arr.length; i++) {
+		document.write("\
+		<article id=\""+arr[i]+"\">\
+			<h1>"+arr[i].toUpperCase()+arr[i]+"</h1>\
+			<section class=\"words\"></section>\
+		</article>");
+	};
+	</script>
+</section>
+</body>
+</html>
