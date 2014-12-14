@@ -239,11 +239,10 @@
 	            url: dataUrl,
 	            async: true,
 	            success: function (data){
+	                console.log(data);
 	                data = $.parseJSON(data);
 	                data = data['data'];
-	    			// console.log(data);
 					data.sort(compare);
-					// console.log(data);
 					for (var i = data.length - 1; i >= 0; i--) {
 						var content = "<div class=\"item\"><div class=\"verticalCenter\"><h2>"+data[i].name+"</h2><p>"+data[i].bedeutung+"</p></div></div>";
 						$('#'+data[i].name.charAt(0).toLowerCase()+' .words').append(content);	
