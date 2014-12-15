@@ -157,7 +157,7 @@
 
 		#data{
 			/*height: 200%;*/
-			
+			display: none;
 		}
 
 		article{
@@ -210,6 +210,16 @@
 		article:nth-child(odd) div{
 			background: #e74c3c;
 		}
+
+		#nodata{
+			text-align: center;
+			background: #eee;
+		}
+
+		#nodata h1{
+			color: #e74c3c;
+			padding: 2em 0;
+		}
 	</style>
 
 	<script type="text/javascript">
@@ -242,11 +252,15 @@
 	                console.log(data);
 	                // data = $.parseJSON(data);
 	                data = data['data'];
-					data.sort(compare);
-					for (var i = data.length - 1; i >= 0; i--) {
-						var content = "<div class=\"item\"><div class=\"verticalCenter\"><h2>"+data[i].name+"</h2><p>"+data[i].bedeutung+"</p></div></div>";
-						$('#'+data[i].name.charAt(0).toLowerCase()+' .words').append(content);	
-					};
+	                if (data.length > 0) {
+	                	$('#data').show();
+	                	$('#nodata').hide();
+	                	data.sort(compare);
+						for (var i = data.length - 1; i >= 0; i--) {
+							var content = "<div class=\"item\"><div class=\"verticalCenter\"><h2>"+data[i].name+"</h2><p>"+data[i].bedeutung+"</p></div></div>";
+							$('#'+data[i].name.charAt(0).toLowerCase()+' .words').append(content);	
+						};
+	                }
 	            }
 	        });
 		});
@@ -313,6 +327,9 @@
 		</article>");
 	};
 	</script>
+</section>
+<section id="nodata">
+	<h1>Wörter konnten leider nicht geladen werden</h1>
 </section>
 </body>
 </html>
